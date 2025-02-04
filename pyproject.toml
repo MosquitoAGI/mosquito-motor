@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fruitfly-motor"
+version = "0.1.0"
+description = "Motor side of the bridge: commands out, telemetry in, silence treated as stop"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/fruitflyxyz/fruitfly-motor"
+Repository = "https://github.com/fruitflyxyz/fruitfly-motor"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+plot = ["Pillow>=10"]
+
+[project.scripts]
+fruitfly-motor = "fruitfly_motor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
