@@ -8,3 +8,4 @@ have no line, which is most weeks.
 - 2025-03-03 — the dead zone is not a fudge; it is the part where the motor hums and does not turn. keep it at 4.
 - 2025-03-16 — tested the shaper on a single spare wheel. the slew limit is the difference between a robot and a catapult.
 - 2025-04-09 — blew a fuse on the bench supply. the shaper was innocent; the wiring was not.
+- 2025-04-23 — read every stop rule out loud tonight. two of them overlapped in a way I did not like; one got simplified.
