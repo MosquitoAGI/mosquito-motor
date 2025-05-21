@@ -10,3 +10,4 @@ have no line, which is most weeks.
 - 2025-04-09 — blew a fuse on the bench supply. the shaper was innocent; the wiring was not.
 - 2025-04-23 — read every stop rule out loud tonight. two of them overlapped in a way I did not like; one got simplified.
 - 2025-05-07 — the bench hub browns out under two servos. lab supply ordered.
+- 2025-05-21 — replay drifts about 4 ms per minute at realtime. acceptable for a bench; noted.
