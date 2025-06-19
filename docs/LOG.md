@@ -12,3 +12,4 @@ have no line, which is most weeks.
 - 2025-05-07 — the bench hub browns out under two servos. lab supply ordered.
 - 2025-05-21 — replay drifts about 4 ms per minute at realtime. acceptable for a bench; noted.
 - 2025-06-05 — counters in the summary save arguments: malformed, dropped, sent, received. no adjectives.
+- 2025-06-19 — quiet month on this side; the bridge got the attention. motor side kept its tests green.
