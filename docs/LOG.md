@@ -14,3 +14,4 @@ have no line, which is most weeks.
 - 2025-06-05 — counters in the summary save arguments: malformed, dropped, sent, received. no adjectives.
 - 2025-06-19 — quiet month on this side; the bridge got the attention. motor side kept its tests green.
 - 2025-07-03 — added p99 to the bench output because a max over 200 samples is one unlucky syscall.
+- 2025-07-18 — measured the loopback round trip before the robot exists. 0.1 ms. the network will never be this honest.
