@@ -6,7 +6,7 @@ Two datagram types, both UTF-8 JSON objects, both under 512 bytes:
      "emergency_stop":false,"reason":"track"}
 
     {"type":"telemetry","sequence":17,"left_speed":18.2,"right_speed":-3.8,
-     "battery":0.93}
+     "gyro":[0,0,0.21],"accel":[0,0,0],"battery":0.93}
 
 Validation is strict in both directions. A malformed packet is counted and
 dropped; it is never partially applied, because half a motor command is a
@@ -22,6 +22,7 @@ from dataclasses import dataclass
 MAX_COMMAND = 100.0
 MAX_PACKET = 512
 MAX_SEQUENCE = 2**31 - 1
+VECTOR_KEYS = ("gyro", "accel")
 
 
 class MotorError(ValueError):
@@ -106,6 +107,8 @@ class Telemetry:
     sequence: int = 0
     left_speed: float = 0.0
     right_speed: float = 0.0
+    gyro: tuple[float, float, float] = (0.0, 0.0, 0.0)
+    accel: tuple[float, float, float] = (0.0, 0.0, 0.0)
     battery: float = 1.0
     age_ms: float = 0.0  # filled in by the watchdog, not carried on the wire
 
@@ -115,6 +118,8 @@ class Telemetry:
             "sequence": int(self.sequence),
             "left_speed": round(float(self.left_speed), 3),
             "right_speed": round(float(self.right_speed), 3),
+            "gyro": [round(float(v), 4) for v in self.gyro],
+            "accel": [round(float(v), 4) for v in self.accel],
             "battery": round(float(self.battery), 4),
         }
 
@@ -131,10 +136,18 @@ class Telemetry:
             raise MotorError("sequence must be an integer")
         if not 0 <= sequence <= MAX_SEQUENCE:
             raise MotorError("sequence out of range")
+        vectors = {}
+        for key in VECTOR_KEYS:
+            values = body.get(key, [0.0, 0.0, 0.0])
+            if not isinstance(values, (list, tuple)) or len(values) != 3:
+                raise MotorError("%s must be three numbers" % key)
+            vectors[key] = tuple(_finite(v, key) for v in values)
         return cls(
             sequence=sequence,
             left_speed=_finite(body.get("left_speed", 0.0), "left_speed"),
             right_speed=_finite(body.get("right_speed", 0.0), "right_speed"),
+            gyro=vectors["gyro"],
+            accel=vectors["accel"],
             battery=_finite(body.get("battery", 1.0), "battery"),
         )
 
