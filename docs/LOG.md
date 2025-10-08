@@ -19,3 +19,4 @@ have no line, which is most weeks.
 - 2025-08-13 — the sim says 1.5 hours of full-speed driving. treat it as a number from a sim, not a promise.
 - 2025-08-26 — spent twenty minutes in the drawer of adapters. the right one was at the bottom. it always is.
 - 2025-09-26 — drew the stop rules on paper: board, watchdog, shaper timeout. three arrows into one box that says zero.
+- 2025-10-08 — soldered the second motor connector. the bench smells like a workshop again, which is the point.
