@@ -21,3 +21,4 @@ have no line, which is most weeks.
 - 2025-09-26 — drew the stop rules on paper: board, watchdog, shaper timeout. three arrows into one box that says zero.
 - 2025-10-08 — soldered the second motor connector. the bench smells like a workshop again, which is the point.
 - 2025-11-04 — quiet weekend: walked through the shaper with a colleague. the dead zone explanation now fits in one sentence.
+- 2025-11-17 — the motors put noise in the telemetry over the long cable. twisted pair fixed it. noted for the harness build.
