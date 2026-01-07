@@ -24,3 +24,4 @@ have no line, which is most weeks.
 - 2025-11-17 — the motors put noise in the telemetry over the long cable. twisted pair fixed it. noted for the harness build.
 - 2025-12-10 — session files are jsonl again. csv was right for a week and wrong for a year.
 - 2025-12-24 — read the diff of the whole package tonight, oldest to newest. it reads like a build log with code attached.
+- 2026-01-07 — re-ran check, sim and bench before the last tag. green across the board.
