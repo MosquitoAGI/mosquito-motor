@@ -20,6 +20,10 @@ CHANNELS = {
     "back": Action.BACK,
 }
 
+# BACK is an explicit action as of 0.2.0. Before that, retreating was
+# "walk backwards with MOTOR_X" which lost the direction on tall pages.
+EXPLICIT_ACTIONS = (Action.CLICK, Action.SCROLL, Action.BACK)
+
 
 def action_of(channel):
     return CHANNELS.get(channel)
