@@ -5,7 +5,7 @@
 **The last hop: shaped commands out, telemetry back.**
 
 ![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-79cce8?style=flat-square)
-![Tests](https://img.shields.io/badge/tests-71_passing-38c172?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-80_passing-38c172?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-60dfb3?style=flat-square)](LICENSE)
 
 </div>

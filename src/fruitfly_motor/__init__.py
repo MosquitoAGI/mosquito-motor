@@ -12,7 +12,7 @@ from .shaper import CommandShaper, ShaperConfig
 from .transport import Link, LinkStats
 from .watchdog import Watchdog, WatchdogConfig
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 SAFE_LEFT = 0.0
 SAFE_RIGHT = 0.0

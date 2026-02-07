@@ -17,7 +17,7 @@ from .protocol import MAX_COMMAND, Command
 class ShaperConfig:
     max_command: float = 60.0
     dead_zone: float = 4.0
-    slew_per_s: float = 0.0
+    slew_per_s: float = 300.0
     smoothing: float = 0.0
     invert_left: bool = False
     invert_right: bool = False
