@@ -19,3 +19,9 @@ def test_tick_moves_cursor():
     c.tick({"x_pos": 0.5}, now=10.0)
     x, y = c.cursor.position()
     assert x == 9
+
+
+def test_cap_is_18():
+    c = Controller()
+    dx, dy = c.displacement({'x_pos': 3.0, 'y_pos': -3.0})
+    assert dx == 18.0 and dy == -18.0
