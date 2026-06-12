@@ -26,3 +26,4 @@ have no line, which is most weeks.
 - 2025-12-24 — read the diff of the whole package tonight, oldest to newest. it reads like a build log with code attached.
 - 2026-01-07 — re-ran check, sim and bench before the last tag. green across the board.
 - 2026-02-01 — the plant model moves on the screen now. first time the project feels like a robot instead of a folder.
+- 2026-06-12 — the escape command is a straight dash at 0.9. it is dumb and it should be: reflexes are for the spine, not the cortex.

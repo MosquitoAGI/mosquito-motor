@@ -118,14 +118,31 @@ def profile_square(t: float) -> tuple[float, float, bool]:
     return (0.55, 0.9, False)
 
 
+def profile_wiggle(t: float) -> tuple[float, float, bool]:
+    """A slow serpentine, useful for watching the yaw filter."""
+    s = math.sin(2.0 * math.pi * t / 1.2)
+    return (0.55 + 0.35 * s, 0.55 - 0.35 * s, False)
+
+
 def profile_idle(t: float) -> tuple[float, float, bool]:
     return (0.0, 0.0, False)
+
+
+def profile_startle(t: float) -> tuple[float, float, bool]:
+    """Stand still, then dash: exercises the escape path."""
+    if t < 2.0:
+        return (0.0, 0.0, False)
+    if t < 2.8:
+        return (0.0, 0.0, True)
+    return (0.6, 0.6, False)
 
 
 PROFILES = {
     "approach": profile_approach,
     "square": profile_square,
+    "wiggle": profile_wiggle,
     "idle": profile_idle,
+    "startle": profile_startle,
 }
 
 
