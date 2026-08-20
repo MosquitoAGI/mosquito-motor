@@ -3,6 +3,13 @@
 All notable changes to this project are recorded here. Dates live in the
 build log (docs/LOG.md); versions live here.
 
+## [0.2.2]
+
+- The watchdog now reports *why* it expired (`never-fed` vs `starved`) — a robot
+  that was never fed is a wiring problem, a robot that was fed and then went
+  quiet is a control problem, and the log line should say which.
+- `bench` prints the p99 command age, not just the maximum.
+
 ## [0.2.1]
 
 - Slew limiting is on by default (300 units/s). Off, a step from 0 to the cap
