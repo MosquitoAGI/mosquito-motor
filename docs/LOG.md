@@ -27,3 +27,4 @@ have no line, which is most weeks.
 - 2026-01-07 — re-ran check, sim and bench before the last tag. green across the board.
 - 2026-02-01 — the plant model moves on the screen now. first time the project feels like a robot instead of a folder.
 - 2026-06-12 — the escape command is a straight dash at 0.9. it is dumb and it should be: reflexes are for the spine, not the cortex.
+- 2026-08-27 — re-ran the whole stop-rule demo before rewriting the readme. the trace still does what the old readme claimed.
