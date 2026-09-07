@@ -2,6 +2,11 @@
 
 All notable changes to this module. Dates in YYYY-MM-DD.
 
+## 0.3.0 — 2026-09-07
+- click only after position settles
+- per-tick displacement cap enforced in displacement()
+- settle and rate-limit tests
+
 ## 0.2.0 — 2026-01-13
 - output rate limit (60 Hz)
 - smooth interpolation between ticks
